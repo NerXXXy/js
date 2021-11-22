@@ -98,7 +98,7 @@ function cOkten (n,m){
     let mas2 = []
      for (let i = 0 ; i < m.length; i++){
             if (m[i] % n === 0){
-             mas2.push(m[i] = 'okten');
+             mas2.push('okten');
              }
             else {
                 mas2.push(m[i]);
