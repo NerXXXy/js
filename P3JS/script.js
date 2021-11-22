@@ -1,5 +1,8 @@
 let mas = [2,17,13,6,22,31,45,66,100,-18];
 
+function allReverse (f){
+    return console.log(f.reverse() , '---------------------reverse');
+}
 
 // Task 1
 //
@@ -13,6 +16,7 @@ function cWhile(m) {
     return mas2
 }
 console.log(cWhile(mas));
+allReverse(cWhile(mas));
 
 
 
@@ -27,6 +31,7 @@ function cFor(m){
 }
 
 console.log(cFor(mas));
+allReverse(cFor(mas));
 
 
 // Task 3
@@ -36,13 +41,14 @@ function cWhileOdd (m){
     let i = 0;
     while (i < m.length){
         if (m[i] % 2 !== 0){
-           mas2.push(m[i]);
+            mas2.push(m[i]);
         }
         i++
     }
     return mas2;
 }
 console.log(cWhileOdd(mas));
+allReverse(cWhileOdd(mas));
 
 
 // Task 4
@@ -57,6 +63,7 @@ function cForOdd (m){
     return mas2;
 }
 console.log(cForOdd(mas));
+allReverse(cForOdd(mas));
 
 
 
@@ -75,6 +82,7 @@ function cWhileEven (m){
 }
 
 console.log(cWhileEven(mas));
+allReverse(cWhileEven(mas));
 
 
 // Task 6
@@ -82,13 +90,14 @@ console.log(cWhileEven(mas));
 function cForEven (m){
     let mas2 = [];
     for (let i = 0 ; i < m.length; i++){
-           if (m[i] % 2 === 0){
+        if (m[i] % 2 === 0){
             mas2.push(m[i]);
-            }
         }
-    return mas2;
     }
+    return mas2;
+}
 console.log(cForEven(mas));
+allReverse(cForEven(mas));
 
 
 
@@ -96,51 +105,20 @@ console.log(cForEven(mas));
 //
 function cOkten (n,m){
     let mas2 = []
-     for (let i = 0 ; i < m.length; i++){
-            if (m[i] % n === 0){
-             mas2.push('okten');
-             }
-            else {
-                mas2.push(m[i]);
-            }
-         }
-     return (mas2);
-     }
- console.log(cOkten(3,mas));
+    for (let i = 0 ; i < m.length; i++){
+        if (m[i] % n === 0){
+            mas2.push('okten');
+        }
+        else {
+            mas2.push(m[i]);
+        }
+    }
+    return (mas2);
+}
+console.log(cOkten(3,mas));
+allReverse(cOkten(3,mas));
 
 
 // Task 8
 //
-function mReverse(m){
-    console.log(m.reverse());
-}
-mReverse(mas);
-
-
-// ------------- Reverse All----------
-// Вже як зробив - побачив, що треба було в зворотньому циклі , віднімаючи і ( тобто i--)
-// якщо критично - можу переробити кожне завдання окремо пыд зворотній цикл
-console.log('--------------All Reverse----------------')
-
-function allReverse (f){
-    return console.log(f.reverse());
-}
-
-allReverse(cWhile(mas));
-allReverse(cFor(mas));
-allReverse(cWhileOdd(mas));
-allReverse(cForOdd(mas));
-allReverse(cWhileEven(mas));
-allReverse(cForEven(mas));
-allReverse(cOkten(3,mas));
-
-
-
-
-
-
-
-
-
-
-
+allReverse(mas);
